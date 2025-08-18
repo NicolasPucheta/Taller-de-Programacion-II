@@ -63,19 +63,9 @@ Namespace My.Resources
         '''<summary>
         '''  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         '''</summary>
-        Friend ReadOnly Property IconoVaron() As System.Drawing.Bitmap
-            Get
-                Dim obj As Object = ResourceManager.GetObject("Hombre", resourceCulture)
-                Return CType(obj,System.Drawing.Bitmap)
-            End Get
-        End Property
-        
-        '''<summary>
-        '''  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
-        '''</summary>
         Friend ReadOnly Property IconoMujer() As System.Drawing.Bitmap
             Get
-                Dim obj As Object = ResourceManager.GetObject("mujer", resourceCulture)
+                Dim obj As Object = ResourceManager.GetObject("IconoMujer", resourceCulture)
                 Return CType(obj,System.Drawing.Bitmap)
             End Get
         End Property
@@ -83,9 +73,9 @@ Namespace My.Resources
         '''<summary>
         '''  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         '''</summary>
-        Friend ReadOnly Property persona() As System.Drawing.Bitmap
+        Friend ReadOnly Property IconoVaron() As System.Drawing.Bitmap
             Get
-                Dim obj As Object = ResourceManager.GetObject("persona", resourceCulture)
+                Dim obj As Object = ResourceManager.GetObject("IconoVaron", resourceCulture)
                 Return CType(obj,System.Drawing.Bitmap)
             End Get
         End Property

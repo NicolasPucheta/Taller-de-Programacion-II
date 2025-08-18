@@ -63,4 +63,20 @@
         End If
         ' Si la respuesta es "No", no sucede nada (el código simplemente termina)
     End Sub
+
+    Private Sub BSalir_Click(sender As Object, e As EventArgs) Handles BSalir.Click
+        Me.Close()
+    End Sub
+    Private Sub RBVaron_CheckedChanged(sender As Object, e As EventArgs) Handles RBVaron.CheckedChanged
+        If RBVaron.Checked Then
+            PictureBoxVacio.Image = My.Resources.IconoVaron
+        End If
+    End Sub
+
+    Private Sub RBMujer_CheckedChanged(sender As Object, e As EventArgs) Handles RBMujer.CheckedChanged
+        If RBMujer.Checked Then
+            PictureBoxVacio.Image = My.Resources.IconoMujer
+        End If
+    End Sub
+
 End Class
