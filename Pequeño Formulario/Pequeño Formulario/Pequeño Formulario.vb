@@ -69,13 +69,20 @@
     End Sub
     Private Sub RBVaron_CheckedChanged(sender As Object, e As EventArgs) Handles RBVaron.CheckedChanged
         If RBVaron.Checked Then
-            PictureBoxVacio.Image = My.Resources.IconoVaron
+            PictureBoxVacio.Image = My.Resources.Resource1.IconoVaron
         End If
     End Sub
 
     Private Sub RBMujer_CheckedChanged(sender As Object, e As EventArgs) Handles RBMujer.CheckedChanged
         If RBMujer.Checked Then
-            PictureBoxVacio.Image = My.Resources.IconoMujer
+            PictureBoxVacio.Image = My.Resources.Resource1.IconoMujer
+        End If
+    End Sub
+
+    Private Sub TTelefono_KeyPress(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyPressEventArgs) Handles TTelefono.KeyPress
+        ' Permite solo la entrada de números y la tecla de retroceso (Backspace)
+        If Not Char.IsDigit(e.KeyChar) AndAlso Not Char.IsControl(e.KeyChar) Then
+            e.Handled = True
         End If
     End Sub
 

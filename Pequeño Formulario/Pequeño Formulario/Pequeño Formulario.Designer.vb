@@ -22,6 +22,7 @@ Partial Class Form1
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Form1))
         Me.LNya = New System.Windows.Forms.Label()
         Me.LDni = New System.Windows.Forms.Label()
         Me.LApellido = New System.Windows.Forms.Label()
@@ -43,6 +44,7 @@ Partial Class Form1
         Me.RBMujer = New System.Windows.Forms.RadioButton()
         Me.BSalir = New System.Windows.Forms.Button()
         Me.PictureBoxVacio = New System.Windows.Forms.PictureBox()
+        Me.Label1 = New System.Windows.Forms.Label()
         Me.Panel1.SuspendLayout()
         CType(Me.PictureBoxVacio, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -116,20 +118,26 @@ Partial Class Form1
         '
         'TGuardar
         '
-        Me.TGuardar.Location = New System.Drawing.Point(59, 524)
+        Me.TGuardar.Image = CType(resources.GetObject("TGuardar.Image"), System.Drawing.Image)
+        Me.TGuardar.ImageAlign = System.Drawing.ContentAlignment.TopLeft
+        Me.TGuardar.Location = New System.Drawing.Point(40, 482)
         Me.TGuardar.Name = "TGuardar"
-        Me.TGuardar.Size = New System.Drawing.Size(75, 23)
+        Me.TGuardar.Size = New System.Drawing.Size(106, 50)
         Me.TGuardar.TabIndex = 8
         Me.TGuardar.Text = "Guardar"
+        Me.TGuardar.TextAlign = System.Drawing.ContentAlignment.MiddleRight
         Me.TGuardar.UseVisualStyleBackColor = True
         '
         'TEliminar
         '
-        Me.TEliminar.Location = New System.Drawing.Point(199, 524)
+        Me.TEliminar.Image = CType(resources.GetObject("TEliminar.Image"), System.Drawing.Image)
+        Me.TEliminar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.TEliminar.Location = New System.Drawing.Point(164, 479)
         Me.TEliminar.Name = "TEliminar"
-        Me.TEliminar.Size = New System.Drawing.Size(75, 23)
+        Me.TEliminar.Size = New System.Drawing.Size(114, 56)
         Me.TEliminar.TabIndex = 9
         Me.TEliminar.Text = "Eliminar"
+        Me.TEliminar.TextAlign = System.Drawing.ContentAlignment.MiddleRight
         Me.TEliminar.UseVisualStyleBackColor = True
         '
         'Panel1
@@ -233,11 +241,14 @@ Partial Class Form1
         '
         'BSalir
         '
-        Me.BSalir.Location = New System.Drawing.Point(358, 524)
+        Me.BSalir.Image = CType(resources.GetObject("BSalir.Image"), System.Drawing.Image)
+        Me.BSalir.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.BSalir.Location = New System.Drawing.Point(332, 479)
         Me.BSalir.Name = "BSalir"
-        Me.BSalir.Size = New System.Drawing.Size(75, 23)
+        Me.BSalir.Size = New System.Drawing.Size(94, 53)
         Me.BSalir.TabIndex = 14
         Me.BSalir.Text = "Salir"
+        Me.BSalir.TextAlign = System.Drawing.ContentAlignment.MiddleRight
         Me.BSalir.UseVisualStyleBackColor = True
         '
         'PictureBoxVacio
@@ -248,11 +259,24 @@ Partial Class Form1
         Me.PictureBoxVacio.TabIndex = 15
         Me.PictureBoxVacio.TabStop = False
         '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.BackColor = System.Drawing.SystemColors.Control
+        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.ForeColor = System.Drawing.SystemColors.Highlight
+        Me.Label1.Location = New System.Drawing.Point(172, 24)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(129, 24)
+        Me.Label1.TabIndex = 16
+        Me.Label1.Text = "Nuevo Cliente"
+        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(466, 616)
+        Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.PictureBoxVacio)
         Me.Controls.Add(Me.BSalir)
         Me.Controls.Add(Me.RBMujer)
@@ -291,4 +315,5 @@ Partial Class Form1
     Friend WithEvents RBMujer As RadioButton
     Friend WithEvents BSalir As Button
     Friend WithEvents PictureBoxVacio As PictureBox
+    Friend WithEvents Label1 As Label
 End Class
